@@ -74,6 +74,12 @@ public class Room
       }
     }
     
+    //the getname method will return the name of the room
+    public String getName() 
+    {
+      return name;
+    }
+    
     //the getlength method will return the length of the room
     
     public double getLength()
