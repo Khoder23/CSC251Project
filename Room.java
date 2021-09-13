@@ -62,15 +62,15 @@ public class Room
     {
       if (shadetype == 1)
       {
-         shade = "little";
+         shade = "Little";
       }
       else if (shadetype == 2)
       {
-         shade = "moderate";
+         shade = "Moderate";
       }
       else
       {
-         shade = "abundant";
+         shade = "Abundant";
       }
     }
     
@@ -120,11 +120,11 @@ public class Room
       double btu = 0;
       
       //using our shade value to set the proper multiplier 
-      if (shade == "little")
+      if (shade == "Little")
       {
          shadeMult = 1.15;
       } 
-      else if (shade == "abundant")
+      else if (shade == "Abundant")
       {
          shadeMult = 0.9;
       } 
