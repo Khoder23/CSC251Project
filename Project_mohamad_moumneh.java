@@ -12,8 +12,8 @@ public class Project_mohamad_moumneh
       //creates a room object that will be fed info by the user 
       Room bedroom = new Room(); 
       
-     /* //creates a room object with given parameters (for testing purposes)
-      Room testRoom = new Room("Testroom", 14.5, 10, "abundant");
+      /*//creates a room object with given parameters (for testing purposes)
+      Room testRoom = new Room("Testroom", 14.5, 10, "Abundant");
       
       //printing out the testroom 
       System.out.println("here is the test room: "); 

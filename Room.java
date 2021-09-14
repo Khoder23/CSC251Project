@@ -25,10 +25,10 @@ public class Room
     
     public Room(String aName, double aLength, double aWidth, String aShade)
     {
-      aName = name;
-      aLength = length;
-      aWidth = width;
-      aShade = shade;  
+      name = aName;
+      length = aLength;
+      width = aWidth;
+      shade = aShade;  
     }
     
     /*the setname method stores a name for the room
