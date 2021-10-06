@@ -120,11 +120,11 @@ public class Room
       double btu = 0;
       
       //using our shade value to set the proper multiplier 
-      if (shade == "Little")
+      if (shade.equals("Little"))
       {
          shadeMult = 1.15;
       } 
-      else if (shade == "Abundant")
+      else if (shade.equals("Abundant"))
       {
          shadeMult = 0.9;
       } 
