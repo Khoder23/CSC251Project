@@ -6,6 +6,7 @@ public class Room
    private double length;
    private double width; 
    private String shade;
+   private AirConditioner AC;
    
     //this no-arg constructor allows us to create a room class with default initialization
     
