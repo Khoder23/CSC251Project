@@ -65,13 +65,17 @@ public class Project_3_mohamad_moumneh
       
       for (int i = 0; i < roomList.size(); i++)
       {
-         //calling all our getters to display the room information to the user
+        /* //calling all our getters to display the room information to the user
          System.out.println("\n\nRoom Name: " + roomList.get(i).getName());
          System.out.println("\nRoom Area (in square feet): " + roomList.get(i).getArea());
          System.out.println("\nAmount of Shade: " + roomList.get(i).getShade());
-         System.out.println("\nBTUs Per Hour needed: " + roomList.get(i).getCooling());
+         System.out.println("\nBTUs Per Hour needed: " + roomList.get(i).getCooling()); */
          
-         //incrementing our shade amount based on the type of shade in our room object
+         //calling the Room and hasAdequateCooling method to display all the information to the user 
+         System.out.println(roomList.get(i));
+         System.out.println("\n" + roomList.get(i).hasAdequateCooling());
+         
+        /* //incrementing our shade amount based on the type of shade in our room object
         if (roomList.get(i).getShade().equals("Abundant")) 
          a++; 
       
@@ -79,7 +83,7 @@ public class Project_3_mohamad_moumneh
           m++; 
       
         if (roomList.get(i).getShade().equals("Little")) 
-         l++; 
+         l++; */
       } 
       
      /* //displaying amount of rooms based on shade 
