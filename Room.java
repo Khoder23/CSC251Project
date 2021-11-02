@@ -183,8 +183,17 @@ public class Room
       }
       return hasCooling;
     }
-      
-      
     
+    //the ToString method will display information about the room class including its airconditioner 
+    public String toString()
+    {
+      String str = "The name of the room: " + name +
+                   "\nThe length of the room: " + length +
+                   "\nThe Width of the room: " + width +
+                   "\nThe shade of the room: " + shade +
+                   "\n" + AC;
+      return str; 
+    }
+         
 }   
   
