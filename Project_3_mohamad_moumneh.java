@@ -1,6 +1,7 @@
 //this program reads inputs from a room file then displays the room objects in the file 
 import java.util.Scanner;
-import java.io.*; //to read from file 
+import java.io.File; //to read from file 
+import java.io.IOException; 
 import java.util.ArrayList; //to create an arraylist 
 
 public class Project_3_mohamad_moumneh
@@ -14,10 +15,10 @@ public class Project_3_mohamad_moumneh
              acManufacturer = "",
              acType = ""; 
              
-      double roomLength = 0,
-             roomWidth = 0;
+      double roomLength,
+             roomWidth;
       
-      int acCooling = 0;
+      int acCooling;
       
       //declaring variables for counting shade 
       int a = 0, //abundant
@@ -38,6 +39,7 @@ public class Project_3_mohamad_moumneh
          roomName = roomFile.nextLine();
          roomLength = roomFile.nextDouble();
          roomWidth = roomFile.nextDouble();
+         
          roomShade = roomFile.nextLine();
          
          //for the Air Conditioner 
@@ -47,10 +49,9 @@ public class Project_3_mohamad_moumneh
             
          //to clear buffers 
          if (roomFile.hasNext())
-         {
             roomFile.nextLine();
+         if (roomFile.hasNext())
             roomFile.nextLine();
-         }
          
          //creates an Air Conditioner object with the above values
          AirConditioner aConditioner = new AirConditioner(acManufacturer, acType, acCooling);
