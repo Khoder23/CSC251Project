@@ -39,7 +39,7 @@ public class Project_3_mohamad_moumneh
          roomName = roomFile.nextLine();
          roomLength = roomFile.nextDouble();
          roomWidth = roomFile.nextDouble();
-         
+         roomFile.nextLine();
          roomShade = roomFile.nextLine();
          
          //for the Air Conditioner 
@@ -82,9 +82,9 @@ public class Project_3_mohamad_moumneh
          l++; 
       } 
       
-      //displaying amount of rooms based on shade 
+     /* //displaying amount of rooms based on shade 
       System.out.println("\nnumber of rooms with little shade: " + l);
       System.out.println("\nnumber of rooms with moderate shade: " + m);
-      System.out.println("\nnumber of rooms with abundant shade: " + a);       
+      System.out.println("\nnumber of rooms with abundant shade: " + a);   */   
    }
 }
