@@ -23,6 +23,14 @@ public class AirConditioner
       this.coolingCap = coolingCap; 
    }
    
+   //this copy constructor initializes the AirConditioner object as a copy of another AirConditioner object
+   public AirConditioner(AirConditioner object2)
+   {
+      Manufacturer = object2.Manufacturer;
+      Type = object2.Type;
+      coolingCap = object2.coolingCap;
+   }
+   
    //the setManufacturer method stores a manufacturer for the air conditioner 
    public void setManufacturer(String Manufacturer)
    {

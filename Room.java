@@ -24,12 +24,13 @@ public class Room
     @param aWidth to set a width for the room
     @param aShade to set shade amount for the room*/
     
-    public Room(String aName, double aLength, double aWidth, String aShade)
+    public Room(String name, double length, double width, String shade, AirConditioner AC)
     {
-      name = aName;
-      length = aLength;
-      width = aWidth;
-      shade = aShade;  
+      this.name = name;
+      this.length = length;
+      this.width = width;
+      this.shade = shade;
+      this.AC = new AirConditioner(AC);   
     }
     
     /*the setname method stores a name for the room
@@ -43,17 +44,17 @@ public class Room
     /*the setlength method stores a length for the room 
     @param len to store the length of the room*/
     
-    public void setLength(double len)
+    public void setLength(double length)
     {
-      length = len;
+      this.length = length;
     }
     
     /*the setwidth method stores a width for the room 
     @param wid to store the width of the room*/
     
-    public void setWidth(double wid)
+    public void setWidth(double width)
     {
-      width = wid;
+      this.width = width;
     }
     
     /*the setshade method figures out what kind of shade the room gets (little, moderate, or abundant)
@@ -73,6 +74,12 @@ public class Room
       {
          shade = "Abundant";
       }
+    }
+    
+    //the setAC method will store an AC object
+    public void setAC(AirConditioner AC)
+    {
+      this.AC = new AirConditioner(AC);
     }
     
     //the getname method will return the name of the room
@@ -153,5 +160,31 @@ public class Room
       
       return btu; 
     }
+    
+    //the getAC method will return the AC unit 
+    public AirConditioner getAC()
+    {
+      return new AirConditioner(AC);
+    }
+    
+    //the hasAdequateCooling method will check the rooms air conditioner to see if it has a high enough capacity to adequately cool the room 
+    public String hasAdequateCooling()
+    {
+      String hasCooling = "";
+   
+      if (getCooling() <= AC.getCooling())
+      {
+         hasCooling = "This room is adequately cooled.";
+      }
+      
+      else if (getCooling() > AC.getCooling())
+      {
+         hasCooling = "This room is not adequately cooled.";
+      }
+      return hasCooling;
+    }
+      
+      
+    
 }   
   
