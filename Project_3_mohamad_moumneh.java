@@ -10,10 +10,14 @@ public class Project_3_mohamad_moumneh
    
       //creating variables to hold in data read by the scanner 
       String roomName = "",
-             roomShade = "";
-         
+             roomShade = "",
+             acManufacturer = "",
+             acType = ""; 
+             
       double roomLength = 0,
              roomWidth = 0;
+      
+      int acCooling = 0;
       
       //declaring variables for counting shade 
       int a = 0, //abundant
@@ -21,7 +25,7 @@ public class Project_3_mohamad_moumneh
           l = 0; //little      
       
       //passing the room file to be read by the scanner object 
-      File myFile = new File("Rooms.txt"); 
+      File myFile = new File("Rooms2.txt"); 
       Scanner roomFile = new Scanner(myFile); 
       
       //creating the arraylist that will hold our room objects 
@@ -30,10 +34,16 @@ public class Project_3_mohamad_moumneh
       //iterates over the file and sets the variables to the proper values 
       while (roomFile.hasNext())
       {
+         //for the room 
          roomName = roomFile.nextLine();
          roomLength = roomFile.nextDouble();
          roomWidth = roomFile.nextDouble();
-         roomShade = roomFile.next();
+         roomShade = roomFile.nextLine();
+         
+         //for the Air Conditioner 
+         acManufacturer = roomFile.nextLine();
+         acType = roomFile.nextLine();
+         acCooling = roomFile.nextInt();
             
          //to clear buffers 
          if (roomFile.hasNext())
@@ -42,8 +52,11 @@ public class Project_3_mohamad_moumneh
             roomFile.nextLine();
          }
          
+         //creates an Air Conditioner object with the above values
+         AirConditioner aConditioner = new AirConditioner(acManufacturer, acType, acCooling);
+         
          //creates a room object with the above values (staying inside the loop otherwise the values will be overwritten as the loop iterates) 
-         Room room = new Room(roomName, roomLength, roomWidth, roomShade); 
+         Room room = new Room(roomName, roomLength, roomWidth, roomShade, aConditioner); 
          
          //while still inside the loop for the same reason as above, adds our room object to the array list
          roomList.add(room);     
